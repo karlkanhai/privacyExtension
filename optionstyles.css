@@ -1,0 +1,242 @@
+.pc-tab > input, 
+.pc-tab section > div { 
+    display: none;
+}
+#tab3:checked ~ section .tab3, 
+#tab1:checked ~ section .tab1, 
+#tab2:checked ~ section .tab2 { 
+    display:block;
+}
+*, *:after, *:before { 
+    box-sizing: border-box;
+
+}
+
+body{ 
+    background-color: #ecf0f1;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 { 
+    text-align: center;
+    font-size: 60px;
+    color:black;
+    letter-spacing: 0.5.px;
+    display: inline-block;
+    
+    
+}
+
+.pc-tab { 
+    width: 100%; 
+    max-width: 700px;
+    margin: 0 auto;
+}
+.pc-tab ul { 
+   list-style-type: none;
+   margin:0;
+   padding: 0;
+}
+
+.pc-tab ul li label { 
+    float:left;
+    padding: 15px 25px;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    background-color: #eeeeee;
+    color:black;
+
+}
+.pc-tab ul li label:hover { 
+    background-color: #ddd;
+
+}
+.pc-tab ul li label:active { 
+    background-color: #fff;
+    
+}
+
+.pc-tab ul li:not(:last-child) label { 
+    border-right-width: 0;
+
+}
+
+.pc-tab section { 
+    clear: both ;
+}
+
+.pc-tab section div { 
+    padding: 20px;
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    line-height: 1.5em;
+    letter-spacing: 0.5px;
+    color:black;
+}
+
+.pc-tab section div h2 {
+    margin:0;
+    letter-spacing: 1px;
+    color: black;
+}
+#tab3:checked ~ nav .tab3 label,
+#tab1:checked ~ nav .tab1 label,
+#tab2:checked ~ nav .tab2 label { 
+    background-color: #fff;
+    color:#111; 
+    position: relative;
+
+}
+#tab3:checked ~ nav .tab3 label:after,
+#tab1:checked ~ nav .tab1 label:after,
+#tab2:checked ~ nav .tab2 label:after { 
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    left:0;
+    bottom:-1px;
+
+}
+
+.headerSection { 
+    white-space: nowrap;
+    position: relative;
+    right: -34%;
+    top:-10%;
+}
+.logo { 
+    display: inline-block;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 38.88px;
+    height: 21.6px;
+}
+      
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+      
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+      
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16.939px;
+    width: 16.939px;
+    left: 2.11px;
+    bottom: 2.11px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+      
+input:checked + .slider {
+    background-color: #2196F3;
+}
+      
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+      
+input:checked + .slider:before {
+    -webkit-transform: translateX(16.939px);
+    -ms-transform: translateX(16.939px);
+    transform: translateX(16.939px);
+}
+      
+.slider.round {
+    border-radius: 30.6px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+.singline{ 
+    
+    white-space: nowrap;
+}
+
+
+.linesing { 
+    display: inline-block;
+    
+}
+
+.whiteListInput { 
+    width:300px;
+    height:30px;
+    font-size:15px;
+    
+}
+
+
+.list { 
+    
+}
+.classname {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background-color:#f24537;
+	-webkit-border-top-left-radius:41px;
+	-moz-border-radius-topleft:41px;
+	border-top-left-radius:41px;
+	-webkit-border-top-right-radius:41px;
+	-moz-border-radius-topright:41px;
+	border-top-right-radius:41px;
+	-webkit-border-bottom-right-radius:41px;
+	-moz-border-radius-bottomright:41px;
+	border-bottom-right-radius:41px;
+	-webkit-border-bottom-left-radius:41px;
+	-moz-border-radius-bottomleft:41px;
+	border-bottom-left-radius:41px;
+text-indent:0;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:11px;
+	font-weight:bold;
+	font-style:normal;
+height:36px;
+	line-height:36px;
+width:78px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:0px 1px 0px #810e05;
+}.classname:hover {
+	background-color:#c62d1f;
+}.classname:active {
+	position:relative;
+	top:1px;
+}
+
+
+#addToWhitelist { 
+    height:30px;
+}
+
+#deleteAll { 
+    height:30px;
+}

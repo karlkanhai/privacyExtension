@@ -1,0 +1,233 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 38.88px;
+    height: 21.6px;
+}
+      
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+      
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+      
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16.939px;
+    width: 16.939px;
+    left: 2.11px;
+    bottom: 2.11px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+      
+input:checked + .slider {
+    background-color: #2196F3;
+}
+      
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+      
+input:checked + .slider:before {
+    -webkit-transform: translateX(16.939px);
+    -ms-transform: translateX(16.939px);
+    transform: translateX(16.939px);
+}
+      
+.slider.round {
+    border-radius: 30.6px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+
+.thirdPartyJSSection { 
+    white-space: nowrap;
+    border-top: solid;
+
+}
+
+.thirdPartyJSLabel { 
+    position: relative;
+    top:3px;
+    margin-top:5px;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    margin-right: 3px;
+}
+
+.thirdPartyJSToggle { 
+    margin-bottom: 10px;
+    
+    display: inline-block;
+    
+}
+
+.thirdPartyJSDescription { 
+    color:green;
+    text-align: center;
+    position: relative;
+    top:-8px;
+    font-size:15px;
+}
+
+
+
+.statusSection { 
+    white-space: nowrap;
+    
+}
+
+.logo { 
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.logoText { 
+    position: absolute;
+    margin-left: 30px;
+    text-align: center;
+    display: inline-block;
+    top:15px;
+}
+
+.shareIcon { 
+    position: absolute;
+    right:5px;
+   
+}
+
+
+
+.thirdPartyCookiesSection { 
+    white-space: nowrap;
+}
+
+.thirdPartyCookiesLabel { 
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    margin-right:21px;
+    position: relative;
+    top:-12px;
+}
+
+.thirdPartyCookiesToggle { 
+    display: inline-block;
+    position: relative;
+    top: -16px;
+    
+    
+}
+
+.thirdPartyCookiesDescription { 
+   position: relative;
+   color:green;
+   font-size:15px;
+   text-align: center;
+   top:-16px;                                       ;
+}
+
+
+
+
+.advertisementBlockerSection { 
+    white-space: nowrap;
+    border-bottom: solid;
+    height:75px;
+}
+
+.advertisementBlockerLabel { 
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    margin-right:26px;
+    position: relative;
+    top:-12px;
+}
+
+.advertisementBlockerToggle { 
+    display: inline-block;
+    position: relative;
+    top: -16px;
+}
+
+.advertisementBlockerDescription { 
+    position: relative;
+   color:green;
+   font-size:15px;
+   text-align: center;
+   top:-20px;
+}
+
+
+
+.arrow {
+    border: solid black;
+    border-width: 0 6px 6px 0;
+    display: inline-block;
+    padding: 6px;
+    
+  }
+
+.down {
+    position: relative;
+    font-size:18px;
+    color:red;
+    align-items: center;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }  
+
+.seeMore { 
+      text-align: center;
+      margin-left:10px;
+      
+  }
+
+#arrowLabel { 
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    position: relative;
+    font-size:18px;
+    color:black;
+    left:-10px;
+    
+}
+
+
+
+
+.footer { 
+    white-space: nowrap;
+    
+}
+
+body { 
+    background-color: #fdfdfd;
+    
+}

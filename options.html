@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel='stylesheet' type='text/css' href='optionstyles.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+  <div class='headerSection'>
+    <img src="barriericon.png" alt="Italian Trulli" width="55px" height="77px" class='logo'>
+    <h1>Barrier Settings</h1>
+  </div>  
+
+  <div class ='pc-tab'>
+    <input checked='checked' id='tab1' type='radio' name='pct'>
+    <input id='tab2' type='radio' name='pct'>
+    <input id='tab3' type='radio' name='pct'>
+    <nav>
+        <ul>
+            <li class='tab1'>
+                <label for='tab1'>Other Features</label>
+                
+            </li>
+            <li class='tab2'>
+                <label for='tab2'>Manage Whitelist</label>
+            </li>
+            <li class='tab3'>
+                <label for='tab3'>About</label>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <div class='tab1 singline'> 
+            <label class="switch thirdPartyJSToggle">
+                <input class='linesing' type="checkbox" id="DNT">
+                <span class="slider round"></span>
+            </label>
+            <p class='linesing'>Send Websites the "Do not track" Signal.</p><br>
+            
+            <label class="switch thirdPartyJSToggle">
+                <input class='linesing' type="checkbox" id="webRTC">
+                <span class="slider round"></span>
+            </label>
+            <p class='linesing'>Prevent WebRTC from leaking local IP address.</p><br>
+            
+            <label class="switch thirdPartyJSToggle">
+                <input class='linesing' type="checkbox" id="learnTrackers">
+                <span class="slider round"></span>
+            </label>
+            <p class='linesing'>Learn to Block Trackers in Browsing Sessions.</p><br>
+            <label class="switch thirdPartyJSToggle">
+                <input class='linesing' type="checkbox" id='cookieEndDeletion'>
+                <span class="slider round"></span>
+            </label>
+            <p class='linesing'>Delete ALL Cookies at The End of Browsing Session.</p><br>
+            <label class="switch thirdPartyJSToggle">
+                <input class='linesing' type="checkbox" id='siteCookieDeletion'>
+                <span class="slider round"></span>
+            </label>
+            <p class='linesing'>Delete SITE SPECIFIC Cookies Upon Tab Close.</p><br>
+            <label class="switch thirdPartyJSToggle">
+                <input class='linesing' type="checkbox" id='IncognitoTrackingBlock'>
+                <span class="slider round"></span>
+            </label>
+            <p class='linesing'>Learn to Block Trackers During Incognito Sessions.</p><br>
+            <label class="switch thirdPartyJSToggle">
+                <input class='linesing' type="checkbox" id="forceHttps">
+                <span class="slider round"></span>
+            </label>
+            <p class='linesing'>Force an HTTPS connection to all sites.</p><br>
+            <label class="switch thirdPartyJSToggle">
+                <input class='linesing' type="checkbox" id='disableAllCookies'>
+                <span class="slider round"></span>
+            </label>
+            <p class='linesing'>Disable All Cookies</p><br>
+            <label class="switch thirdPartyJSToggle">
+                <input class='linesing' type="checkbox" id='disableSearchSuggestions'>
+                <span class="slider round"></span>
+            </label>
+            <p class='linesing'>Disable Search Suggestions</p>
+            <br>
+            <label class="switch thirdPartyJSToggle">
+                <input class='linesing' type="checkbox" id='disableNetworkPrediction'>
+                <span class="slider round"></span>
+            </label>
+            <p class='linesing'>Network Prediction Protection</p>
+            <br>
+            <label class="switch thirdPartyJSToggle">
+                <input class='linesing' type="checkbox" id="disableJavascript">
+                <span class="slider round"></span>
+            </label>
+            <p class='linesing'>Disable All Javascript</p>
+            <br>
+            <label class="switch thirdPartyJSToggle">
+                <input class='linesing' type="checkbox" id='disableSpellingSuggestion'>
+                <span class="slider round"></span>
+            </label>
+            <p class='linesing'>Disable Spelling Suggestions</p>
+            <br>
+            <label class="switch thirdPartyJSToggle">
+                <input class='linesing' type="checkbox" id='disableGoogleTranslation'>
+                <span class="slider round"></span>
+            </label>
+            <p class='linesing'>Disable Google Translation</p>
+            
+            
+        </div>
+        
+        <div class='tab2' > 
+            <p>Barrier will be disabled on the following sites. This means that Barrier will not protect you when you visit sites on this list.</p>
+            <p>If you think Barrier is breaking a page, you can type that page's domain in the box below and click the "Add" button.</p>
+            <p>Alternatively, when you already have the page's tab selected, you can just click on Barrier's button in the browser toolbar and then click the shield button.</p><br>
+            <input class='whiteListInput'type='text' placeholder="e.g www.domain.com, *.domain.net, domain.org" id='whiteListBox'> <button id='addToWhitelist'>Add</button><button id='deleteAll'>RemoveAll</button>
+            <p id='whiteListURLS'>www.google.com</p>
+            
+        </div>
+        <div class='tab3'>
+        
+           <p>Barrier is the only all-in-one tool for online privacy.</p>
+           <p>Barrier is produced as an independent, open-source project.</p>
+           <p>Barrier is proudly powered by other privacy services such as uBlock and Privacy Badger.</p>
+           <p>Our Github:</p>
+           <p>Made Possible by:</p>
+           <p>https://github.com/gorhill/uBlock/releases</p> 
+           <p>https://github.com/EFForg/https-everywhere</p>
+           <p>https://github.com/EFForg/privacybadger</p>
+        </div>
+
+        </div>
+    </section>
+</div>
+
+
+
+
+
+<script src='sidesettings.js'></script>
+</body>
+</html>

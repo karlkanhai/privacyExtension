@@ -1,0 +1,19 @@
+defaultFilters = [
+	"http://www.facebook.com/plugins/likebox.php?*",
+	"*://*.doubleclick.net/*",
+	"*://partner.googleadservices.com/*",
+	"*://*.googlesyndication.com/*",
+	"*://*.google-analytics.com/*",
+	"*://creative.ak.fbcdn.net/*",
+	"*://*.adbrite.com/*",
+	"*://*.exponential.com/*",
+	"*://*.quantserve.com/*",
+	"*://*.scorecardresearch.com/*",
+	"*://*.zedo.com/*",
+	"*://ad.doubleclick.net/*",
+	"*://zedo.com/*",
+	"*://*.zedo.com/*", 
+	"*://*.trafficjunky.com/*", 
+	"*://trafficjunky.com/*", 
+	"*://gstatic.com/*"
+]
