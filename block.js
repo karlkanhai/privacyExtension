@@ -1,9 +1,4 @@
-/**
- * All the actual functionality of the extension; loads as part of the background page.
- *
- * Active ingredient is enable(), which sets up the webRequest callbacks.
- *
- * */
+
 
 allFilters = null;
 webRTCPrivacy = null;
@@ -63,10 +58,7 @@ function enable(icon = true) {
 		}
 	}
 
-	// a scheme of "*" does not currently match ws:// or wss://
-	// for current status, see:
-	// https://bugs.chromium.org/p/chromium/issues/detail?id=129353
-	// https://developer.chrome.com/extensions/match_patterns
+
 	var wsFilters = [];
 	var prefix = "*://"
 	allFilters.forEach(function(filter) {
