@@ -11,19 +11,8 @@ if ( self.browser instanceof Object ) {
 
 /******************************************************************************/
 
-// https://bugzilla.mozilla.org/show_bug.cgi?id=1408996#c9
+
 var vAPI = self.vAPI; // jshint ignore:line
-
-// https://github.com/chrisaljoudi/uBlock/issues/464
-// https://github.com/chrisaljoudi/uBlock/issues/1528
-//   A XMLDocument can be a valid HTML document.
-
-// https://github.com/gorhill/uBlock/issues/1124
-//   Looks like `contentType` is on track to be standardized:
-//   https://dom.spec.whatwg.org/#concept-document-content-type
-
-// https://forums.lanik.us/viewtopic.php?f=64&t=31522
-//   Skip text/plain documents.
 
 if (
     (
@@ -48,15 +37,5 @@ if (
 
 
 
-/*******************************************************************************
-
-    DO NOT:
-    - Remove the following code
-    - Add code beyond the following code
-    Reason:
-    - https://github.com/gorhill/uBlock/pull/3721
-    - uBO never uses the return value from injected content scripts
-
-**/
 
 void 0;
