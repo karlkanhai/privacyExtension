@@ -1,24 +1,3 @@
-/*******************************************************************************
-
-    uBlock Origin - a browser extension to block requests.
-    Copyright (C) 2014-present Raymond Hill
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see {http://www.gnu.org/licenses/}.
-
-    Home: https://github.com/gorhill/uBlock
-*/
-
 
 'use strict';
 
@@ -141,13 +120,7 @@ const µBlock = (( ) => { // jshint ignore:line
             selfieMagic: 28,    // Increase when selfie format changes
         },
 
-        // https://github.com/uBlockOrigin/uBlock-issues/issues/759#issuecomment-546654501
-        //   The assumption is that cache storage state reflects whether
-        //   compiled or selfie assets are available or not. The properties
-        //   below is to no longer rely on this assumption -- though it's still
-        //   not clear how the assumption could be wrong, and it's still not
-        //   clear whether relying on those properties will really solve the
-        //   issue. It's just an attempt at hardening.
+       
         compiledFormatChanged: false,
         selfieIsInvalid: false,
 
@@ -160,9 +133,7 @@ const µBlock = (( ) => { // jshint ignore:line
 
         commandShortcuts: new Map(),
 
-        // Allows to fully customize uBO's assets, typically set through admin
-        // settings. The content of 'assets.json' will also tell which filter
-        // lists to enable by default when uBO is first installed.
+       
         assetsBootstrapLocation: undefined,
 
         userFiltersPath: 'user-filters',
@@ -171,8 +142,7 @@ const µBlock = (( ) => { // jshint ignore:line
         selectedFilterLists: [],
         availableFilterLists: {},
 
-        // https://github.com/uBlockOrigin/uBlock-issues/issues/974
-        //   This can be used to defer filtering decision-making.
+        
         readyToFilter: false,
 
         pageStores: new Map(),
