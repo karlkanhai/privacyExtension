@@ -1,23 +1,4 @@
-/*******************************************************************************
 
-    uBlock Origin - a browser extension to block requests.
-    Copyright (C) 2014-present Raymond Hill
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see {http://www.gnu.org/licenses/}.
-
-    Home: https://github.com/gorhill/uBlock
-*/
 
 'use strict';
 
@@ -96,7 +77,6 @@ api.fetch = function(url, options = {}) {
         reject(details);
     };
 
-    // https://github.com/gorhill/uMatrix/issues/15
     const onLoadEvent = function() {
         cleanup();
         // xhr for local files gives status 0, but actually succeeds
@@ -121,8 +101,7 @@ api.fetch = function(url, options = {}) {
         xhr.abort();
     };
 
-    // https://github.com/gorhill/uBlock/issues/2526
-    // - Timeout only when there is no progress.
+
     const onProgressEvent = function(ev) {
         if ( ev.loaded === contentLoaded ) { return; }
         contentLoaded = ev.loaded;
@@ -158,17 +137,7 @@ api.fetchText = async function(url) {
     const isExternal = reIsExternalPath.test(url);
     let actualUrl = isExternal ? url : vAPI.getURL(url);
 
-    // https://github.com/gorhill/uBlock/issues/2592
-    //   Force browser cache to be bypassed, but only for resources which have
-    //   been fetched more than one hour ago.
-    // https://github.com/uBlockOrigin/uBlock-issues/issues/682#issuecomment-515197130
-    //   Provide filter list authors a way to completely bypass
-    //   the browser cache.
-    // https://github.com/gorhill/uBlock/commit/048bfd251c9b#r37972005
-    //   Use modulo prime numbers to avoid generating the same token at the
-    //   same time across different days.
-    // Do not bypass browser cache if we are asked to be gentle on remote
-    // servers.
+  
     if ( isExternal && remoteServerFriendly !== true ) {
         const cacheBypassToken =
             µBlock.hiddenSettings.updateAssetBypassBrowserCache
@@ -192,9 +161,7 @@ api.fetchText = async function(url) {
             details.content = '';
         }
 
-        // We never download anything else than plain text: discard if
-        // response appears to be a HTML document: could happen when server
-        // serves some kind of error page for example.
+        
         const text = details.content.trim();
         if ( text.startsWith('<') && text.endsWith('>') ) {
             details.content = '';
@@ -203,17 +170,13 @@ api.fetchText = async function(url) {
         details = ex;
     }
 
-    // We want to return the caller's URL, not our internal one which may
-    // differ from the caller's one.
+
     details.url = url;
 
     return details;
 };
 
-/******************************************************************************/
 
-// https://github.com/gorhill/uBlock/issues/3331
-//   Support the seamless loading of sublists.
 
 api.fetchFilterList = async function(mainlistURL) {
     const toParsedURL = url => {
@@ -223,10 +186,7 @@ api.fetchFilterList = async function(mainlistURL) {
         }
     };
 
-    // https://github.com/NanoAdblocker/NanoCore/issues/239
-    //   Anything under URL's root directory is allowed to be fetched. The
-    //   URL of a sublist will always be relative to the URL of the parent
-    //   list (instead of the URL of the root list).
+
     let rootDirectoryURL = toParsedURL(
         reIsExternalPath.test(mainlistURL)
             ? mainlistURL
@@ -751,9 +711,7 @@ const getRemote = async function(assetKey) {
         contentURLs = assetDetails.contentURL.slice(0);
     }
 
-    // If asked to be gentle on remote servers, favour using dedicated CDN
-    // servers. If more than one CDN server is present, randomly shuffle the
-    // set of servers so as to spread the bandwidth burden.
+  
     if ( remoteServerFriendly && Array.isArray(assetDetails.cdnURLs) ) {
         const cdnURLs = assetDetails.cdnURLs.slice();
         for ( let i = 0, n = cdnURLs.length; i < n; i++ ) {
