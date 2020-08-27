@@ -15,12 +15,7 @@ vAPI.localStorage.getItemAsync('popupFontSize').then(value => {
     popupFontSize = value;
 });
 
-// https://github.com/gorhill/uBlock/issues/3032
-// Popup panel can be in one of two modes:
-// - not responsive: viewport is expected to adjust to popup panel size
-// - responsive: popup panel must adjust to viewport size -- this happens
-//   when the viewport is not resized by the browser to perfectly fits uBO's
-//   popup panel.
+
 if (
     vAPI.webextFlavor.soup.has('mobile') ||
     /[\?&]responsive=1/.test(window.location.search)
