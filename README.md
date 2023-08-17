@@ -2,7 +2,7 @@
 <h1>Barrier</h1>  <img src='BarrierIcon.png' height='80px' width='60px'>
 <p>Barrier is the only all-in-one tool for online privacy. Barrier incorporates cookie and script blockers, smart anti-tracking, and the most sophisticated adblock. Your data is safe when using Barrier. All these features and more are encapsulated in Barrier’s slick user interface, with easy-to-use toggles and whitelist.
 
-Barrier is produced as an independent, open-source project. Barrier is proudly powered by other privacy services such as uBlock and Privacy Badger. 
+Barrier is produced as an independent, open-source project. The project is proudly powered by other privacy services such as uBlock and Privacy Badger. 
 
 With Barrier, you can navigate the web safely.</p>
 
